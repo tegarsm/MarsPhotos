@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2021 The Android Open Source Project.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.example.android.marsphotos.overview
 
 import android.os.Bundle
@@ -25,7 +9,7 @@ import androidx.fragment.app.viewModels
 import com.example.android.marsphotos.databinding.FragmentOverviewBinding
 
 /**
- * This fragment shows the the status of the Mars photos web services transaction.
+ * Fragmen ini menunjukkan status transaksi layanan web foto Mars
  */
 class OverviewFragment : Fragment() {
 
@@ -41,13 +25,13 @@ class OverviewFragment : Fragment() {
     ): View? {
         val binding = FragmentOverviewBinding.inflate(inflater)
 
-        // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
+        // Memungkinkan Pengikatan Data untuk Mengamati LiveData dengan siklus hidup Fragmen ini
         binding.lifecycleOwner = this
 
-        // Giving the binding access to the OverviewViewModel
+        // Memberikan akses pengikatan ke OverviewViewModel
         binding.viewModel = viewModel
 
-        // Sets the adapter of the photosGrid RecyclerView
+        // Menyetel adaptor photosGrid RecyclerView
         binding.photosGrid.adapter = PhotoGridAdapter()
 
         return binding.root
